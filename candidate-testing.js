@@ -24,21 +24,25 @@ function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 for ( let i = 0; i < questions.length; i++) {
   const input = require("readline-sync");
-  let candidateAnswers = input.question(questions[i]);
-    console.log(`Your Answer: ${candidateAnswers}\nCorrect Answer: ${correctAnswers[i]}\n`)
+    candidateAnswers[i] = input.question(questions[i]);
+    console.log(`Your Answer: ${candidateAnswers}\nCorrect Answer: ${correctAnswers[i]}\n`);
 }
-return candidateAnswers;
 }
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 console.log(candidateAnswers);
-
   let grade = (0);
+  for ( let i = 0; i < correctAnswers.length; i++) {
+    if (candidateAnswers[i] === correctAnswers[i]) {
+      grade = grade + 1;
+    } else{
+      grade = grade + 0;
+    }
+  }
   
-  
-
+console.log(grade);
   return grade;
 }
 
