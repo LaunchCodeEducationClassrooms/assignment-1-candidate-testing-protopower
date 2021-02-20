@@ -41,6 +41,7 @@ console.log(candidateAnswers);
       grade = grade + 0;
     }
   }
+console.log("<<< Overall Grade: " + (grade / 5 * 100) + "% (" + grade + " out of 5 responses correct) <<<");
   
 console.log(grade);
   return grade;
