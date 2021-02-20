@@ -25,9 +25,9 @@ function askQuestion() {
 for ( let i = 0; i < questions.length; i++) {
   const input = require("readline-sync");
   let candidateAnswers = input.question(questions[i]);
-    console.log(`Your Answer: ${candidateAnswers[i]}\nCorrect Answer: ${correctAnswers[i]}\n`)
+    console.log(`Your Answer: ${candidateAnswers}\nCorrect Answer: ${correctAnswers[i]}\n`)
 }
-
+return candidateAnswers;
 }
 
 function gradeQuiz(candidateAnswers) {
@@ -35,14 +35,8 @@ function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 console.log(candidateAnswers);
 
-  let grade = 0;
-  for (let i = 0; i < correctAnswers.length; i++) {
-  if (candidateAnswers[i].toLowercase() === correctAnswers[i].toLowercase()) {
-      grade = grade + 1;
-    } else {
-      grade = grade + 0;
-    }
-  }
+  let grade = (0);
+  
   
 
   return grade;
