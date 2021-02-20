@@ -25,7 +25,7 @@ function askQuestion() {
 for ( let i = 0; i < questions.length; i++) {
   const input = require("readline-sync");
     candidateAnswers[i] = input.question(questions[i]);
-    console.log(`Your Answer: ${candidateAnswers}\nCorrect Answer: ${correctAnswers[i]}\n`);
+    console.log(`Your Answer: ${candidateAnswers[i]}\nCorrect Answer: ${correctAnswers[i]}\n`);
 }
 }
 
@@ -35,7 +35,7 @@ function gradeQuiz(candidateAnswers) {
 console.log(candidateAnswers);
   let grade = (0);
   for ( let i = 0; i < correctAnswers.length; i++) {
-    if (candidateAnswers[i] === correctAnswers[i]) {
+    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
       grade = grade + 1;
     } else{
       grade = grade + 0;
