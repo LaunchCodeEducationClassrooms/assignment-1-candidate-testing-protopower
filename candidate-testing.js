@@ -35,12 +35,12 @@ function gradeQuiz(candidateAnswers) {
   let grade = (0);
   for ( let i = 0; i < correctAnswers.length; i++) {
     if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
-      grade = grade + 1;
+      grade = grade + 20;
     } else{
       grade = grade + 0;
     }
   }
-console.log("<<< Overall Grade: " + (grade / 5 * 100) + "% (" + grade + " out of 5 responses correct) <<<");
+console.log("<<< Overall Grade: " + (grade) + "% (" + grade + " out of 5 responses correct) <<<");
 if (grade >= 4) {
   console.log(">>> Status: PASSED <<<");
 } else{
